@@ -1,0 +1,12 @@
+http://www.7-zip.org/a/7z1604.exe 7-zip_32-bit_x86.zip
+http://www.7-zip.org/a/7z1604.exe 7-zip_32-bit_x86_1.zip
+http://www.7-zip.org/a/7z1604-x64.exe 7-zip_64-bit_x64.zip
+http://www.prolific.com.tw/UserFiles/files/PL2303_CheckChipVersion_v1006.zip PL2303.zip
+http://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_RU&CttFileID=5812595&CDCttType=UM&ModelType=N&ModelName=NP-Q210I&VPath=UM/201408/20140828144203471/Win7_Vista_Manual_eng.pdf&OriginYN=N user_manual.pdf
+http://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_RU&CttFileID=5812595&CDCttType=UM&ModelType=N&ModelName=NP-Q210I&VPath=UM/201408/20140828144203471/Win7_Vista_Manual_eng.pdf&OriginYN=N user_manual_1.pdf
+http://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_RU&CttFileID=1953868&CDCttType=SW&ModelType=N&ModelName=NP-Q210I&VPath=SW/200902/20090218110631031/User_Manual_1.7.0.0.zip&OriginYN=N sumsung.zip
+http://www.7-zip.org/a/7z1604-x64.exe 7-zip_64-bit_x64_2.zip
+http://www.7-zip.org/a/7z1604-x64.exe 7-zip_64-bit_x64_3.zip
+http://www.7-zip.org/a/7z1604-x64.exe 7-zip_64-bit_x64_4.zip
+http://www.prolific.com.tw/UserFiles/files/PL2303_CheckChipVersion_v1006.zip PL2303_1.zip
+http://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_RU&CttFileID=1953868&CDCttType=SW&ModelType=N&ModelName=NP-Q210I&VPath=SW/200902/20090218110631031/User_Manual_1.7.0.0.zip&OriginYN=N sumsung_1.zip

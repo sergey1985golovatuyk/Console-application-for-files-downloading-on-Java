@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_utility" default="compile.module.utility">
+  <dirname property="module.utility.basedir" file="${ant.file.module_utility}"/>
+  
+  <property name="module.jdk.home.utility" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.utility" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.utility" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.utility" value="-encoding UTF-8 -source 1.8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="utility.output.dir" value="${module.utility.basedir}/out/production/Utility"/>
+  <property name="utility.testoutput.dir" value="${module.utility.basedir}/out/test/Utility"/>
+  
+  <path id="utility.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="utility.module.production.classpath">
+    <path refid="${module.jdk.classpath.utility}"/>
+  </path>
+  
+  <path id="utility.runtime.production.module.classpath">
+    <pathelement location="${utility.output.dir}"/>
+  </path>
+  
+  <path id="utility.module.classpath">
+    <path refid="${module.jdk.classpath.utility}"/>
+    <pathelement location="${utility.output.dir}"/>
+  </path>
+  
+  <path id="utility.runtime.module.classpath">
+    <pathelement location="${utility.testoutput.dir}"/>
+    <pathelement location="${utility.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.utility">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.utility">
+    <patternset refid="excluded.from.module.utility"/>
+  </patternset>
+  
+  <path id="utility.module.sourcepath">
+    <dirset dir="${module.utility.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.utility" depends="compile.module.utility.production,compile.module.utility.tests" description="Compile module Utility"/>
+  
+  <target name="compile.module.utility.production" depends="register.custom.compilers" description="Compile module Utility; production classes">
+    <mkdir dir="${utility.output.dir}"/>
+    <javac2 destdir="${utility.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.utility}/javac">
+      <compilerarg line="${compiler.args.utility}"/>
+      <bootclasspath refid="utility.module.bootclasspath"/>
+      <classpath refid="utility.module.production.classpath"/>
+      <src refid="utility.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.utility"/>
+    </javac2>
+    
+    <copy todir="${utility.output.dir}">
+      <fileset dir="${module.utility.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.utility.tests" depends="register.custom.compilers,compile.module.utility.production" description="compile module Utility; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.utility" description="cleanup module">
+    <delete dir="${utility.output.dir}"/>
+    <delete dir="${utility.testoutput.dir}"/>
+  </target>
+</project>
